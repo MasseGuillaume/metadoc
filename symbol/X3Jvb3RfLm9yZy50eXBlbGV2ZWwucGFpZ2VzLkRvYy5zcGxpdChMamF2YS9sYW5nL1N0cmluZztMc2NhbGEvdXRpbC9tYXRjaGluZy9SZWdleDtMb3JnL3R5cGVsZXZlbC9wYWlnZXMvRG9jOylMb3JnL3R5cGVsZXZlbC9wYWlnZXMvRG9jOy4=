@@ -1,0 +1,8 @@
+
+‰_root_.org.typelevel.paiges.Doc.split(Ljava/lang/String;Lscala/util/matching/Regex;Lorg/typelevel/paiges/Doc;)Lorg/typelevel/paiges/Doc;.C
+9paiges/core/src/main/scala/org/typelevel/paiges/Doc.scalaí©ò©C
+9paiges/core/src/main/scala/org/typelevel/paiges/Doc.scala†Ê‹ÊH
+@paiges/core/src/test/scala/org/typelevel/paiges/Generators.scalaßäH
+@paiges/core/src/test/scala/org/typelevel/paiges/Generators.scala‰ŽH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaÊÏH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scala› 

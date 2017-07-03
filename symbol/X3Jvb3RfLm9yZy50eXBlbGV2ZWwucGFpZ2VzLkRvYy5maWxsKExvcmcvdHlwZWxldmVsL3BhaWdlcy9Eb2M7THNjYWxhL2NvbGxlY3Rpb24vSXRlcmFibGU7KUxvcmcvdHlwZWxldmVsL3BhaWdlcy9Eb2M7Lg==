@@ -1,0 +1,11 @@
+
+v_root_.org.typelevel.paiges.Doc.fill(Lorg/typelevel/paiges/Doc;Lscala/collection/Iterable;)Lorg/typelevel/paiges/Doc;.C
+9paiges/core/src/main/scala/org/typelevel/paiges/Doc.scalaÇ®Ë®F
+>paiges/core/src/main/scala/org/typelevel/paiges/Document.scala·	»	H
+@paiges/core/src/test/scala/org/typelevel/paiges/Generators.scalaÎ	Ò	F
+>paiges/core/src/test/scala/org/typelevel/paiges/JsonTest.scalaƒ	‡	H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaà*ä*H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scala«D¯DH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaŽI’IH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaªe®eH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scala÷eûe

@@ -1,0 +1,51 @@
+
+<_root_.org.typelevel.paiges.Doc#render(I)Ljava/lang/String;.A
+9paiges/core/src/main/scala/org/typelevel/paiges/Doc.scalaœ.’.C
+9paiges/core/src/main/scala/org/typelevel/paiges/Doc.scala£ó©óC
+9paiges/core/src/main/scala/org/typelevel/paiges/Doc.scalaºô¬ôC
+9paiges/core/src/main/scala/org/typelevel/paiges/Doc.scalaÀô—ôK
+Cpaiges/core/src/test/scala/org/typelevel/paiges/DocumentTests.scalaà
+é
+K
+Cpaiges/core/src/test/scala/org/typelevel/paiges/DocumentTests.scala¥∫F
+>paiges/core/src/test/scala/org/typelevel/paiges/JsonTest.scalaÍF
+>paiges/core/src/test/scala/org/typelevel/paiges/JsonTest.scala¡«H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scala™∞H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaù£H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaª	¡	H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaË	Ó	H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scala˜˝H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaø≈H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scala≤∏H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaü•H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaÂÎH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scala∂ºH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scala¿∆H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaÊÏH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaôüH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scala«ÕH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaı˚H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaü!•!H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaŒ!‘!H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaí%ò%H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scala∞&∂&H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scala‘'⁄'H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaÊ'Ï'H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaå(í(H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaáGçGH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaÒG˜GH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaÅJáJH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaÙJ˙JH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scala∫L¿LH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scala¨M≤MH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaÉWâWH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaºZ¬ZH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scala¸[Ç\H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scala†`¶`H
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaöd†dH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scala¢f®fH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaÀf—fH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaÛf˘fH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaŸmﬂmH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scalaóuùuH
+@paiges/core/src/test/scala/org/typelevel/paiges/PaigesTest.scala˘uˇu
