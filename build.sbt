@@ -111,6 +111,7 @@ lazy val core = crossProject
   .in(file("metadoc-core"))
   .settings(
     allSettings,
+    PB.runProtoc := { args => Process("protoc", args).! },
     PB.targets.in(Compile) := Seq(
       scalapb.gen(
         flatPackage = true // Don't append filename to package

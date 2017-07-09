@@ -6,12 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.annotation.ScalaJSDefined
 import monaco.Range
 import monaco.Promise
-import monaco.editor.Editor
-import monaco.editor.IEditor
-import monaco.editor.IEditorConstructionOptions
-import monaco.editor.IEditorOverrideServices
-import monaco.editor.IModelChangedEvent
-import monaco.editor.IStandaloneCodeEditor
+import monaco.editor._
 import monaco.services.IResourceInput
 import monaco.services.IEditorService
 import org.scalajs.dom
@@ -33,6 +28,7 @@ class MetadocEditorService extends IEditorService {
       // NOTE: getControl() is defined on SimpleEditor and is called when changing files.
       editor
     }
+
 
     editor
   }

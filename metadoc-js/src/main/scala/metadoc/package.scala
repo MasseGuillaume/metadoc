@@ -35,6 +35,16 @@ package object metadoc {
   def createUri(filename: String): Uri =
     Uri.parse(s"semanticdb:$filename")
 
+  implicit class XtensionUri(val self: Uri) {
+    def withFragment(fragment: String): Uri = {
+      self.`with`(
+        js.Dynamic.literal(
+          "fragment" -> fragment
+        )
+      )
+    }
+  }
+
   implicit class XtensionFutureToThenable[T](future: Future[T]) {
     import scala.scalajs.js.JSConverters._
     // This method allows us to work with Future[T] in metadoc and convert

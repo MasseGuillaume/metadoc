@@ -398,16 +398,16 @@ trait IScrollEvent extends js.Object {
 
 @js.native
 trait IPosition extends js.Object {
-  def lineNumber: Double = js.native
-  def column: Double = js.native
+  def lineNumber: Int = js.native
+  def column: Int = js.native
 }
 
 @js.native
 @JSGlobal("monaco.Position")
 class Position protected () extends IPosition {
-  def this(lineNumber: Double, column: Double) = this()
-  override def lineNumber: Double = js.native
-  override def column: Double = js.native
+  def this(lineNumber: Int, column: Int) = this()
+  override def lineNumber: Int = js.native
+  override def column: Int = js.native
   def equals(other: IPosition): Boolean = js.native
   def isBefore(other: IPosition): Boolean = js.native
   def isBeforeOrEqual(other: IPosition): Boolean = js.native
@@ -428,25 +428,25 @@ object Position extends js.Object {
 
 @js.native
 trait IRange extends js.Object {
-  def startLineNumber: Double = js.native
-  def startColumn: Double = js.native
-  def endLineNumber: Double = js.native
-  def endColumn: Double = js.native
+  def startLineNumber: Int = js.native
+  def startColumn: Int= js.native
+  def endLineNumber: Int = js.native
+  def endColumn: Int = js.native
 }
 
 @js.native
 @JSGlobal("monaco.Range")
 class Range protected () extends IRange {
   def this(
-      startLineNumber: Double,
-      startColumn: Double,
-      endLineNumber: Double,
-      endColumn: Double
+      startLineNumber: Int,
+      startColumn: Int,
+      endLineNumber: Int,
+      endColumn: Int
   ) = this()
-  override def startLineNumber: Double = js.native
-  override def startColumn: Double = js.native
-  override def endLineNumber: Double = js.native
-  override def endColumn: Double = js.native
+  override def startLineNumber: Int = js.native
+  override def startColumn: Int = js.native
+  override def endLineNumber: Int = js.native
+  override def endColumn: Int = js.native
   def isEmpty(): Boolean = js.native
   def containsPosition(position: IPosition): Boolean = js.native
   def containsRange(range: IRange): Boolean = js.native
@@ -457,8 +457,8 @@ class Range protected () extends IRange {
   def getStartPosition(): Position = js.native
   def cloneRange(): Range = js.native
   override def toString(): String = js.native
-  def setEndPosition(endLineNumber: Double, endColumn: Double): Range = js.native
-  def setStartPosition(startLineNumber: Double, startColumn: Double): Range = js.native
+  def setEndPosition(endLineNumber: Int, endColumn: Int): Range = js.native
+  def setStartPosition(startLineNumber: Int, startColumn: Int): Range = js.native
   def collapseToStart(): Range = js.native
 }
 
@@ -493,27 +493,27 @@ trait ISelection extends js.Object {
 @JSGlobal("monaco.Selection")
 class Selection protected () extends Range {
   def this(
-      selectionStartLineNumber: Double,
-      selectionStartColumn: Double,
-      positionLineNumber: Double,
-      positionColumn: Double
+      selectionStartLineNumber: Int,
+      selectionStartColumn: Int,
+      positionLineNumber: Int,
+      positionColumn: Int
   ) = this()
-  def selectionStartLineNumber: Double = js.native
-  def selectionStartColumn: Double = js.native
-  def positionLineNumber: Double = js.native
-  def positionColumn: Double = js.native
+  def selectionStartLineNumber: Int = js.native
+  def selectionStartColumn: Int = js.native
+  def positionLineNumber: Int = js.native
+  def positionColumn: Int = js.native
   override def clone(): Selection = js.native
   override def toString(): String = js.native
   def equalsSelection(other: ISelection): Boolean = js.native
   def getDirection(): SelectionDirection = js.native
   override def setEndPosition(
-      endLineNumber: Double,
-      endColumn: Double
+      endLineNumber: Int,
+      endColumn: Int
   ): Selection = js.native
   def getPosition(): Position = js.native
   override def setStartPosition(
-      startLineNumber: Double,
-      startColumn: Double
+      startLineNumber: Int,
+      startColumn: Int
   ): Selection = js.native
 }
 
@@ -529,10 +529,10 @@ object Selection extends js.Object {
   ): Boolean = js.native
   def isISelection(obj: js.Any): Boolean = js.native
   def createWithDirection(
-      startLineNumber: Double,
-      startColumn: Double,
-      endLineNumber: Double,
-      endColumn: Double,
+      startLineNumber: Int,
+      startColumn: Int,
+      endLineNumber: Int,
+      endColumn: Int,
       direction: SelectionDirection
   ): Selection = js.native
 }

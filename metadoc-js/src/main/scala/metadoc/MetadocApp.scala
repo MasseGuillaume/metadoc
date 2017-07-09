@@ -1,21 +1,23 @@
 package metadoc
 
-import scala.concurrent.ExecutionContext.Implicits.global
-import scala.concurrent.Future
-import scala.concurrent.Promise
-import scala.meta._
-import scala.scalajs.js
-import scala.scalajs.js.typedarray.TypedArrayBuffer
 import metadoc.schema.Index
-import monaco.Uri
-import monaco.editor.IEditor
-import monaco.editor.IEditorConstructionOptions
-import monaco.editor.IEditorOverrideServices
-import monaco.editor.IModelChangedEvent
+
+import scala.meta._
+
+import monaco.{Uri, Range}
+import monaco.editor.{IEditor, IEditorConstructionOptions, IEditorOverrideServices, IModelChangedEvent}
 import monaco.languages.ILanguageExtensionPoint
 import monaco.services.{IResourceInput, ITextEditorOptions}
+
 import org.scalajs.dom
 import org.scalajs.dom.Event
+
+import scala.scalajs.js
+import scala.scalajs.js.JSConverters._
+import scala.scalajs.js.typedarray.TypedArrayBuffer
+
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.{Future, Promise}
 
 object MetadocApp extends js.JSApp {
   def main(): Unit = {
@@ -28,22 +30,28 @@ object MetadocApp extends js.JSApp {
       registerLanguageExtensions(index)
 
       val editorService = new MetadocEditorService()
-      val input = parseResourceInput(
-        index.files.find(_.endsWith("Doc.scala")).get
-      )
+//      val input = parseResourceInput(
+//        index.files.find(_.endsWith("Doc.scala")).get
+//      )
       openEditor(editorService, input)
     }
   }
 
-  def parseResourceInput(defaultPath: String): IResourceInput = {
-    val path = Option(dom.window.location.hash.stripPrefix("#/"))
-      .filter(_.nonEmpty)
-      .getOrElse(defaultPath)
-    val input = jsObject[IResourceInput]
-    input.resource = createUri(path)
-    input.options = jsObject[ITextEditorOptions]
-    input
-  }
+//  def parseResourceInput(defaultPath: String): IResourceInput = {
+//    val path = Option(dom.window.location.hash.stripPrefix("#/"))
+//      .filter(_.nonEmpty)
+//      .getOrElse(defaultPath)
+//
+//    val input = jsObject[IResourceInput]
+//
+//    val uri = MetadocUri.fromString(path)
+//
+//    input.resource = uri.base
+//    input.options = jsObject[ITextEditorOptions]
+//    input.options.selection = range
+//
+//    input
+//  }
 
   def updateLocation(uri: Uri): Unit = {
     dom.document.getElementById("title").textContent = uri.path
@@ -79,10 +87,18 @@ object MetadocApp extends js.JSApp {
       input: IResourceInput
   ): Unit = {
     updateLocation(input.resource)
-    for (editor <- editorService.open(input)) {
-      editor.onDidChangeModel(event => updateLocation(event.newModelUrl))
 
-      dom.window.onhashchange = { e: Event =>
+    for (editor <- editorService.open(input)) {
+      editor.onDidChangeModel(event =>
+        updateLocation(event.newModelUrl)
+      )
+
+      editor.onDidChangeCursorSelection(event => {
+        println("foo bar")
+        println(event.selection)
+      })
+
+      dom.window.onhashchange = { _ =>
         openEditor(editorService, parseResourceInput(editor.getModel.uri.path))
       }
 
