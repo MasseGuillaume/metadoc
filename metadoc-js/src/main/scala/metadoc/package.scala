@@ -32,9 +32,6 @@ package object metadoc {
   def jsObject[T <: js.Object]: T =
     (new js.Object()).asInstanceOf[T]
 
-  def createUri(filename: String): Uri =
-    Uri.parse(s"semanticdb:$filename")
-
   implicit class XtensionUri(val self: Uri) {
     def withFragment(fragment: String): Uri = {
       self.`with`(
@@ -54,6 +51,9 @@ package object metadoc {
     def toMonacoThenable: Thenable[T] =
       future.toJSPromise.asInstanceOf[Thenable[T]]
   }
+
+  def createUri(filename: String): Uri =
+    Uri.parse(s"semanticdb:$filename")
 
   implicit class XtensionIReadOnlyModel(val self: IReadOnlyModel)
       extends AnyVal {

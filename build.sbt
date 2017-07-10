@@ -32,19 +32,20 @@ lazy val allSettings = Seq(
       "scm:git:git@github.com:olafurpg/metadoc.git"
     )
   ),
-  pomExtra :=
-    <developers>
-      <developer>
-        <id>olafurpg</id>
-        <name>Ólafur Páll Geirsson</name>
-        <url>https://geirsson.com</url>
-      </developer>
-      <developer>
-        <id>jonas</id>
-        <name>Jonas Fonseca</name>
-        <url>https://github.com/jonas</url>
-      </developer>
-    </developers>
+  developers ++= List(
+    Developer(
+      id = "olafurpg",
+      name = "Ólafur Páll Geirsson",
+      url = url("https://geirsson.com"),
+      email = "olafur@geirsson.com"
+    ),
+    Developer(
+      id = "jonas",
+      name = "Jonas Fonseca",
+      url = url("https://github.com/jonas"),
+      email = "jonas.fonseca@gmail.com"
+    )
+  )
 ) ++ testDependencies
 
 lazy val example = project
@@ -72,6 +73,7 @@ lazy val cli = project
 lazy val js = project
   .in(file("metadoc-js"))
   .settings(
+    allSettings,
     moduleName := "metadoc-js",
     additionalNpmConfig in Compile := Map("private" -> bool(true)),
     additionalNpmConfig in Test := additionalNpmConfig.in(Test).value,

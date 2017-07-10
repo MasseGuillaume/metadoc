@@ -30,28 +30,28 @@ object MetadocApp extends js.JSApp {
       registerLanguageExtensions(index)
 
       val editorService = new MetadocEditorService()
-//      val input = parseResourceInput(
-//        index.files.find(_.endsWith("Doc.scala")).get
-//      )
+      val input = parseResourceInput(
+        index.files.find(_.endsWith("Doc.scala")).get
+      )
       openEditor(editorService, input)
     }
   }
 
-//  def parseResourceInput(defaultPath: String): IResourceInput = {
-//    val path = Option(dom.window.location.hash.stripPrefix("#/"))
-//      .filter(_.nonEmpty)
-//      .getOrElse(defaultPath)
-//
-//    val input = jsObject[IResourceInput]
-//
-//    val uri = MetadocUri.fromString(path)
-//
-//    input.resource = uri.base
-//    input.options = jsObject[ITextEditorOptions]
+  def parseResourceInput(defaultPath: String): IResourceInput = {
+    val path = Option(dom.window.location.hash.stripPrefix("#/"))
+      .filter(_.nonEmpty)
+      .getOrElse(defaultPath)
+
+    val input = jsObject[IResourceInput]
+
+    val uri = MetadocUri.fromString(path)
+
+    input.resource = uri.base
+    input.options = jsObject[ITextEditorOptions]
 //    input.options.selection = range
-//
-//    input
-//  }
+
+    input
+  }
 
   def updateLocation(uri: Uri): Unit = {
     dom.document.getElementById("title").textContent = uri.path
@@ -82,10 +82,7 @@ object MetadocApp extends js.JSApp {
     )
   }
 
-  def openEditor(
-      editorService: MetadocEditorService,
-      input: IResourceInput
-  ): Unit = {
+  def openEditor(editorService: MetadocEditorService, input: IResourceInput): Unit = {
     updateLocation(input.resource)
 
     for (editor <- editorService.open(input)) {
